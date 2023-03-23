@@ -1,0 +1,26 @@
+#!/bin/bash
+unalias -a
+echo
+echo "       path_change (Version February 20 2023) (C) Copyright 2023 Arjan Koning All Rights Reserved"
+echo
+#
+# Script to change the base directory in machine.f or machine.f90
+#
+#  Ensure that the base directory is changed by replacing
+#    the path name in subroutine machine.f or machine.f90
+#
+basedir=`pwd`'/'
+if [ -e machine.f ] ; then
+  ffile=machine.f
+fi
+if [ -e machine.f90 ] ; then
+  ffile=machine.f90
+fi
+if [ -e $ffile ] ; then
+  newdir=`echo $basedir | sed 's/\//\\\\\//g' | sed 's/source.*$//g'`
+  sed "s/  basedir.*/  basedir = '${newdir}'/" $ffile > tmp
+  mv -f tmp $ffile
+  echo 'Replaced base directory in ' $ffile' by:'
+  grep '  basedir =' $ffile
+  echo
+fi
