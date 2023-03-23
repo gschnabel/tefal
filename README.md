@@ -3,7 +3,7 @@
 TEFAL is a software package for the processing of the output files of the TALYS nuclear reaction code, and data from other sources, into an ENDF-6 format nuclear data library.
 
 ## Documentation and reference
-The user manual for TEFAL can be found here: [TEFAL User Manual (pdf)](https://github.com/IAEA-NDS/tefal/doc/tefal.pdf).
+The user manual for TEFAL can be found here: [TEFAL User Manual (pdf)](https://github.com/arjankoning1/tefal/doc/tefal.pdf).
 The reference to be used for TEFAL is
 
 A.J. Koning, D. Rochman, J.-Ch. Sublet, N. Dzysiuk, M. Fleming, and S. van der Marck, *TENDL: Complete Nuclear Data Library for innovative Nuclear Science and Technology*, Nuclear Data Sheets 155,1 (2019).
